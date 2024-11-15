@@ -1,0 +1,30 @@
+# tasks.log
+
+- Memlog Maintenance:
+  - [ ] Regularly update `tasks.log` with new tasks
+  - [ ] Document all changes in `changelog.md`
+  - [ ] Review and update `stability_checklist.md` after testing
+  - [ ] Keep `url_debug_checklist.md` current with debugging efforts
+
+- Draft very high level task list
+    - Core Game Development:
+      - [ ] Implement physics engine
+      - [ ] Develop player controls
+      - [ ] Design initial levels
+    - Multiplayer Support:
+      - [ ] Set up Socket.io server
+      - [ ] Implement lobby system
+      - [ ] Synchronize game states between clients
+    - Level Editor:
+      - [ ] Design UI for level editor
+      - [ ] Implement level saving and loading
+      - [ ] Enable sharing of custom levels
+    - Frontend Website:
+      - [ ] Create landing page
+      - [ ] Develop user authentication system
+      - [ ] Integrate game canvas into website
+    - Documentation:
+      - [ ] Write API documentation
+      - [ ] Create user manuals and tutorials
+      - [ ] Document development processes
+    
