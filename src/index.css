@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the game */
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-game-primary text-white m-0 p-0 overflow-hidden;
+  }
+}
+
+@layer components {
+  .game-container {
+    @apply w-full h-full relative;
+  }
+
+  .game-canvas {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
+
+  .game-ui {
+    @apply absolute top-0 left-0 w-full h-full pointer-events-none;
+  }
+
+  .game-ui * {
+    @apply pointer-events-auto;
+  }
+}
+
+/* Custom animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  @apply w-12 h-12 border-4 border-game-accent rounded-full border-t-white;
+  animation: spin 1s linear infinite;
+}
+
+/* Error message styling */
+.error-message {
+  @apply bg-red-500 bg-opacity-90 text-white px-4 py-2 rounded shadow-lg;
+}
+
+/* Performance monitoring overlay */
+.performance-stats {
+  @apply fixed top-0 right-0 bg-black bg-opacity-50 p-2 text-xs font-mono;
+}

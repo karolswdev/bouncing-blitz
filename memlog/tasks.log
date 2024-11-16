@@ -1,30 +1,158 @@
 # tasks.log
 
-- Memlog Maintenance:
-  - [ ] Regularly update `tasks.log` with new tasks
-  - [ ] Document all changes in `changelog.md`
-  - [ ] Review and update `stability_checklist.md` after testing
-  - [ ] Keep `url_debug_checklist.md` current with debugging efforts
+## EMERGENCY PATCH [0.2.4] - Core Racing Mechanics Overhaul
+1. Track System Redesign
+   - [ ] Implement fixed-width track system
+     - Define track boundaries (width and height)
+     - Add invisible walls to prevent ball from going off-track
+     - Implement track length configuration
+   - [ ] Create track progression system
+     - Add forward momentum system
+     - Implement track completion detection
+     - Add finish line trigger
+   - [ ] Add checkpoint system
+     - Place checkpoint triggers at intervals
+     - Save progress at checkpoints
+     - Implement respawn at last checkpoint
 
-- Draft very high level task list
-    - Core Game Development:
-      - [ ] Implement physics engine
-      - [ ] Develop player controls
-      - [ ] Design initial levels
-    - Multiplayer Support:
-      - [ ] Set up Socket.io server
-      - [ ] Implement lobby system
-      - [ ] Synchronize game states between clients
-    - Level Editor:
-      - [ ] Design UI for level editor
-      - [ ] Implement level saving and loading
-      - [ ] Enable sharing of custom levels
-    - Frontend Website:
-      - [ ] Create landing page
-      - [ ] Develop user authentication system
-      - [ ] Integrate game canvas into website
-    - Documentation:
-      - [ ] Write API documentation
-      - [ ] Create user manuals and tutorials
-      - [ ] Document development processes
-    
+2. Platform Grid System
+   - [ ] Implement grid-based platform placement
+     - Create grid helper visualization
+     - Snap platforms to grid points
+     - Add grid size configuration
+   - [ ] Add platform height layers
+     - Define vertical grid layers
+     - Allow platforms at different heights
+     - Add visual guides for layers
+
+3. Track Editor Enhancements
+   - [ ] Add track length configuration
+     - Track length input field
+     - Visual representation of track length
+     - Grid system that extends to track length
+   - [ ] Improve platform placement
+     - Grid snapping system
+     - Height layer selection
+     - Platform rotation controls
+   - [ ] Add track validation
+     - Check for valid start/finish
+     - Verify track is completable
+     - Validate checkpoint sequence
+
+4. Ball Physics Refinement
+   - [ ] Implement forward momentum
+     - Constant forward velocity
+     - Speed boost/slow zones
+     - Momentum preservation on bounces
+   - [ ] Add skill-based controls
+     - Left/right movement
+     - Jump control
+     - Air control adjustments
+   - [ ] Improve collision response
+     - Better bounce physics
+     - Platform type effects
+     - Edge handling
+
+5. Camera System Update
+   - [ ] Implement racing camera
+     - Follow ball at fixed distance
+     - Slight camera tilt for better perspective
+     - Smooth camera transitions
+   - [ ] Add camera effects
+     - Speed-based FOV changes
+     - Impact shake effects
+     - Checkpoint camera moments
+
+6. Track Saving/Loading System
+   - [ ] Create track save format
+     - Track metadata (name, length, difficulty)
+     - Platform grid data
+     - Checkpoint positions
+   - [ ] Implement save/load functionality
+     - Local storage support
+     - Track validation on load
+     - Error handling for invalid tracks
+
+7. UI/UX Improvements
+   - [ ] Add race UI elements
+     - Progress indicator
+     - Speed display
+     - Checkpoint counter
+   - [ ] Enhance editor UI
+     - Grid visualization
+     - Layer indicators
+     - Platform type selector
+   - [ ] Add feedback elements
+     - Checkpoint notifications
+     - Speed boost indicators
+     - Collision feedback
+
+## In Progress (Phase 2: Core Gameplay)
+1. Critical Physics Fixes
+   - [ ] Implement continuous collision detection
+   - [ ] Fix ball clipping through platforms
+   - [ ] Add collision prediction for high speeds
+   - [ ] Improve platform edge collisions
+
+2. Race Track Implementation
+   - [ ] Create first test track layout
+   - [ ] Implement boost pad mechanics
+   - [ ] Add obstacle interaction logic
+   - [ ] Test checkpoint sequence flow
+
+3. Game Flow
+   - [ ] Add race start countdown
+   - [ ] Implement race timer
+   - [ ] Add race completion UI
+   - [ ] Create restart mechanism
+
+## Next Steps (Immediate)
+1. Track Editor Improvements
+   - [ ] Add platform rotation controls
+   - [ ] Implement platform resizing
+   - [ ] Add platform property editor
+   - [ ] Create track validation feedback
+
+2. Physics System
+   - [ ] Test platform-specific collision responses
+   - [ ] Implement boost pad velocity modifications
+   - [ ] Add bounce pad force calculations
+   - [ ] Create obstacle collision effects
+
+3. Player Experience
+   - [ ] Add visual feedback for checkpoint activation
+   - [ ] Create platform effect particles
+   - [ ] Implement race progress indicators
+   - [ ] Add sound effects for interactions
+
+## Known Issues
+1. Critical
+   - Ball clipping through platforms during fast movement
+   - Platform collision detection needs improvement
+   - Moving platforms can cause ball to pass through
+
+2. Non-Critical
+   - Need visual indicators for platform types
+   - Race progress feedback needs improvement
+   - Platform effects need visual polish
+   - Editor camera controls could be smoother
+
+## Technical Debt
+1. High Priority
+   - Implement continuous collision detection
+   - Add proper physics state validation
+   - Create platform collision prediction
+
+2. Medium Priority
+   - Add performance monitoring
+   - Implement proper error logging
+   - Create debug visualization tools
+   - Add editor state persistence
+
+## Notes
+- Core engine is functional but needs physics improvements
+- Race track system is implemented but needs testing
+- Track editor is functional but needs polish and additional features
+- Need to create test tracks to validate race mechanics
+- Consider adding undo/redo functionality to track editor
+

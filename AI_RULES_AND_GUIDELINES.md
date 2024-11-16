@@ -1,6 +1,6 @@
 # AI Rules and Guidelines for Bouncing Blitz Development
 
-This document outlines the rules, best practices, and guidelines that AI must follow when assisting with the development of the [REDACTED] MERN stack project.
+This document outlines the rules, best practices, and guidelines that AI must follow when assisting with the development of the Bouncing Blitz project.
 
 ## 1. Memlog System
 
